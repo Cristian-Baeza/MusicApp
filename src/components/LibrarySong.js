@@ -1,4 +1,5 @@
 // import React from 'react';
+import { playAudio } from '../util';
 
 const LibrarySong = ({
   song,
@@ -26,7 +27,10 @@ const LibrarySong = ({
       }
     });
     setSongs(newSongs);
+    playAudio(isPlaying, audioRef);
 
+    //asked to delete on #20 another day another bug fix. 
+    //deleting this causes clicking on a song not in order to not play. So will keep it
     setCurrentSong(song);
     if (isPlaying) {
       const playPromise = audioRef.current.play();
@@ -35,6 +39,7 @@ const LibrarySong = ({
       })
     }
   }
+  //
 
   return (
     <div onClick={songSelectHandler}
