@@ -7,6 +7,9 @@
   background: white;
   box-shadow: 2px 2px 50px rgb(204, 204, 204);
   overflow: scroll;
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+  opacity: 0;
   h2 {
     padding: 2rem;
   }
@@ -35,6 +38,7 @@
   }
 }
 
+// cant believe this doesnt work on Chrome. I should have just deleted this but I was stubborn and wanted to figure out a way to make it work.
 * {
   scrollbar-width: thin;
   scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
@@ -49,4 +53,13 @@
   background-color: rgba(155, 155, 155, 0.5);
   border-radius: 20px;
   border: transparent;
+}
+
+.selected {
+  background: rgb(216, 220, 250);
+}
+
+.active-library {
+  transform: translateX(0%);
+  opacity: 1;
 }
