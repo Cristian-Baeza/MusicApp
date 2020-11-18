@@ -1,5 +1,4 @@
 // import React from 'react';
-import { playAudio } from '../util';
 
 const LibrarySong = ({
   song,
@@ -11,8 +10,10 @@ const LibrarySong = ({
   setSongs
 }) => {
 
-  const songSelectHandler = () => {
-    //add active state 
+  const songSelectHandler = async () => {
+    const selectedSong = songs.filter((state) => state.id === id);
+    await setCurrentSong({ ...selectedSong[0] });
+    //Set Active in library
     const newSongs = songs.map((song) => {
       if (song.id === id) {
         return {
@@ -27,18 +28,40 @@ const LibrarySong = ({
       }
     });
     setSongs(newSongs);
-    playAudio(isPlaying, audioRef);
 
-    //asked to delete on #20 another day another bug fix. 
-    //deleting this causes clicking on a song not in order to not play. So will keep it
-    setCurrentSong(song);
-    if (isPlaying) {
-      const playPromise = audioRef.current.play();
-      playPromise.then((audio) => {
-        audioRef.current.play();
-      })
-    }
-  }
+    //Play audio
+    if (isPlaying) audioRef.current.play()
+  };
+
+  // const songSelectHandler = async () => {
+  //   //add active state 
+  //   const newSongs = songs.map((song) => {
+  //     if (song.id === id) {
+  //       return {
+  //         ...song,
+  //         active: true,
+  //       };
+  //     } else {
+  //       return {
+  //         ...song,
+  //         active: false,
+  //       };
+  //     }
+  //   });
+  //   setSongs(newSongs);
+  //   if (isPlaying) audioRef.current.play()
+
+
+  //   //asked to delete on #20 another day another bug fix. 
+  //   //deleting this causes clicking on a song not in order to not play. So will keep it
+  //   await setCurrentSong(song);
+  //   if (isPlaying) {
+  //     const playPromise = audioRef.current.play();
+  //     playPromise.then((audio) => {
+  //       audioRef.current.play();
+  //     })
+  //   }
+  // }
   //
 
   return (
