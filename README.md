@@ -5,8 +5,7 @@ Check it out!: https://cristianbaeza-music-app.netlify.app/
 Greetings fellow human! Welcome to my React Music App. Some goals I had when building this project: 
 
 - Keep a clean/minimalist ui
-- Practice using hooks. You will notice I did not use any class components. 
-- Practice managing state. I found it extremely interesting how state was managed with hooks instead of class components. This project helped me to further understand how implementing Redux would help. 
+- Use hooks. You will notice I did not use any class components. 
 - Make a project worthy of a portfolio
 - Mobile Responsive (was going to add Bootstrap but I ended up only using about 5 lines of vanilla css code)
 
