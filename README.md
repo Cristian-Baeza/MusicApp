@@ -2,8 +2,8 @@
 
 Check it out!: https://cristianbaeza-music-app.netlify.app/
 
-Greetings fellow human! Welcome to my React Music App.
-About: 
+Greetings fellow human! Welcome to my React Music App. <br/>
+About: <br/>
 -HTML
 -CSS/Styled Components
 -React (Hooks)
