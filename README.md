@@ -4,12 +4,12 @@ Check it out!: https://cristianbaeza-music-app.netlify.app/
 
 Greetings fellow human! Welcome to my React Music App. <br/>
 About: <br/>
--HTML
--CSS/Styled Components
--React (Hooks)
--React Router
--Framer Motion for animations
--Mobile Responsive
+-HTML <br/>
+-CSS/Styled Components <br/>
+-React (Hooks) <br/>
+-React Router <br/>
+-Framer Motion for animations <br/>
+-Mobile Responsive <br/>
 
 
 Overall this was a great learning experience. I only pulled out a third of my hair and, if you will allow me to brag, I only cried in the fetal position twice! Which is way less than when I first started learning Redux/thunk. 
